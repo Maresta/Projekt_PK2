@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1559911454 source:c:\users\pc\documents\code bocks programy\projekt\lista.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"sqlite3.h"
+	"lista.h"
+
+1555466770 c:\users\pc\documents\code bocks programy\projekt\sqlite3.h
+	<stdarg.h>
+
+1559911365 c:\users\pc\documents\code bocks programy\projekt\lista.h
+	"sqlite3.h"
+
+1559686157 source:c:\users\pc\documents\code bocks programy\projekt\main.c
+	<stdio.h>
+	"program.h"
+
+1559911365 c:\users\pc\documents\code bocks programy\projekt\rekomendacja.h
+	"lista.h"
+
+1559685426 source:c:\users\pc\documents\code bocks programy\projekt\rekomendacja.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"rekomendacja.h"
+	"lista.h"
+
+1559911365 source:c:\users\pc\documents\code bocks programy\projekt\program.c
+	<stdio.h>
+	<stdlib.h>
+	"rekomendacja.h"
+	"lista.h"
+
+1559911365 c:\users\pc\documents\code bocks programy\projekt\program.h
+
