@@ -12,8 +12,6 @@ void rekomendacja_wiersz(int argc, char*argv[], struct osoba*glowa)
         return;
     sasiedzi(wsk,glowa);
     return;
-
-
 }
 
 void rekomendacja(struct osoba*glowa)
