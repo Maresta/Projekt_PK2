@@ -16,8 +16,6 @@ void rekomendacja_wiersz(int argc, char*argv[], struct osoba*glowa)
 
 }
 
-
-
 void rekomendacja(struct osoba*glowa)
 {
     char imie[100];
