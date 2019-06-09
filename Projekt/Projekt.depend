@@ -9,7 +9,7 @@
 1555466770 c:\users\pc\documents\code bocks programy\projekt\sqlite3.h
 	<stdarg.h>
 
-1559911365 c:\users\pc\documents\code bocks programy\projekt\lista.h
+1560115546 c:\users\pc\documents\code bocks programy\projekt\lista.h
 	"sqlite3.h"
 
 1559686157 source:c:\users\pc\documents\code bocks programy\projekt\main.c
@@ -19,18 +19,18 @@
 1559911365 c:\users\pc\documents\code bocks programy\projekt\rekomendacja.h
 	"lista.h"
 
-1559685426 source:c:\users\pc\documents\code bocks programy\projekt\rekomendacja.c
+1560114613 source:c:\users\pc\documents\code bocks programy\projekt\rekomendacja.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"rekomendacja.h"
 	"lista.h"
 
-1559911365 source:c:\users\pc\documents\code bocks programy\projekt\program.c
+1560116279 source:c:\users\pc\documents\code bocks programy\projekt\program.c
 	<stdio.h>
 	<stdlib.h>
 	"rekomendacja.h"
 	"lista.h"
 
-1559911365 c:\users\pc\documents\code bocks programy\projekt\program.h
+1560114613 c:\users\pc\documents\code bocks programy\projekt\program.h
 

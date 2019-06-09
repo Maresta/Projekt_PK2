@@ -12,7 +12,11 @@ void rekomendacja_wiersz(int argc, char*argv[], struct osoba*glowa)
         return;
     sasiedzi(wsk,glowa);
     return;
+
+
 }
+
+
 
 void rekomendacja(struct osoba*glowa)
 {
@@ -62,8 +66,8 @@ int licz_zespoly(struct osoba* user)
 
 void sasiedzi(struct osoba*user, struct osoba*glowa)
 {
-    typedef int ( * liczenieT)(struct osoba*);
-    liczenieT pliczenie=licz_zespoly;
+    typedef int ( * liczenieT)(struct osoba*);//Tworzenie wskaŸnika na funkcje, zwracajaca int, ktorej argumentem jest struct*osoba
+    liczenieT pliczenie=licz_zespoly;//Przypisanie wskaznika pliczenie do funkcji licz_zespoly()
     float *tab_sasiedzi;
     tab_sasiedzi=(float*)malloc(sizeof(*tab_sasiedzi));
     struct osoba **tab_sasiedzi_wsk;
@@ -73,7 +77,7 @@ void sasiedzi(struct osoba*user, struct osoba*glowa)
     struct zespoly*wsk_zespoly_user=user->ulubione;
     struct osoba *wsk_osoby=glowa;
 
-    while(wsk_osoby!=NULL)
+    while(wsk_osoby!=NULL)//Obliczanie zgodnosci danego uzytkownika z reszta uzytkownikow
     {
         float suma=0;
         struct zespoly* wsk_zespoly_osoby=wsk_osoby->ulubione;
@@ -103,7 +107,6 @@ void sasiedzi(struct osoba*user, struct osoba*glowa)
         wsk_osoby=wsk_osoby->next;
     }
     struct osoba*bliscy_sasiedzi[10]={0};
-
     najblizszi_sasiedzi(bliscy_sasiedzi, tab_sasiedzi, tab_sasiedzi_wsk,iterator);
     rekomendowane_zespoly(user,bliscy_sasiedzi);
 
@@ -121,7 +124,7 @@ void rekomendowane_zespoly(struct osoba*user, struct osoba*bliscy_sasiedzi[])
     wynik_zespoly[0]=0;
     struct zespoly*wsk_user=user->ulubione;
     int licznik=0;
-    for(int i=0; i<10;i++)
+    for(int i=0; i<10;i++)//Wyznaczanie liczby powtorzen kazdego zespolu wsrod 10 uzytkownikow "najblizszych" uzytkownikowi dla ktorego tworzona jest rekomendacja
     {
         struct zespoly*wsk_sasiad=bliscy_sasiedzi[i]->ulubione;
         while(wsk_sasiad!=NULL)
@@ -150,6 +153,7 @@ void rekomendowane_zespoly(struct osoba*user, struct osoba*bliscy_sasiedzi[])
             }
             if(wynik==0)
             {
+
                 zespoly[licznik]=wsk_sasiad->nazwa;
                 wynik_zespoly[licznik]=wynik_zespoly[licznik]+1;
                 zespoly=realloc(zespoly,(licznik+2)*sizeof(char*));
@@ -187,7 +191,7 @@ void najlepsze_zespoly(char** zespoly[],int wynik_zespoly[],int licznik)
 {
     int indeks[5]={0};
 
-    for(int i=0;i<5;i++)
+    for(int i=0;i<5;i++)//wyznaczanie najczesciej powtarzajacych sie zespolow wsrod 10 "najblizszych" uzytkownikowi ktoremu tworzona jest rekomendacja
     {
         for(int k=0;k<licznik;k++)
         {
@@ -211,7 +215,7 @@ void najlepsze_zespoly(char** zespoly[],int wynik_zespoly[],int licznik)
  void najblizszi_sasiedzi(struct osoba*bliscy_sasiedzi[],float tab_sasiedzi[],struct osoba* tab_sasiedzi_wsk[],int iterator)
 {
     int indeks[10]={0};
-    for(int k=0;k<10;k++)
+    for(int k=0;k<10;k++)//Wyznaczanie 10 uzytkownikow z najwieksza zgodnoscia do uzytkownika dla ktorego tworzona jest rekomendacja
     {
     for(int i=0; i<iterator;i++)
     {

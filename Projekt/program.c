@@ -6,12 +6,12 @@
 void program(int argc, char*argv[])
 {
 
-osoba*glowa=NULL;
+osoba*glowa=NULL; //Deklaracja wskaxnika na pierwszy element listy osoba
 int opcja;
 char wybor;
 wczytaj(&glowa);
 
-if(argc>2)
+if(argc==3)
 {
     printf("%s %s\n",argv[1],argv[2]);
     rekomendacja_wiersz( argc, argv,glowa);

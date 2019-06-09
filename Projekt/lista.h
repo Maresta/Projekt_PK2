@@ -16,7 +16,6 @@ typedef struct zespoly
 	char nazwa[100];
 	struct zespoly *next;
 
-
 }zespoly;
 
 //Funkcja przygotowuje plik "Uzytkownicy.db" do odczytu danych, a nastêpnie wywo³uje funkcjê wczytajOsoba,
@@ -47,7 +46,7 @@ void wyswietl(struct osoba *glowa);
 //jej argumentem jest wskaŸnik na pierwszy element listy zespoly
 void wyswietlUlub(struct zespoly*glowa);
 
-//Funckja usuwa listê ulubinych zespo³ów danego u¿ytkownika,
+//Funckja usuwa listê ulubionych zespo³ów danego u¿ytkownika,
 //jej argumentem jest wskaŸnik na pierwszy element listy zespo³y
 void usunZespoly(struct zespoly* glowa);
 
