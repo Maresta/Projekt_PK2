@@ -154,8 +154,6 @@ void rekomendowane_zespoly(struct osoba*user, struct osoba*bliscy_sasiedzi[])
             }
             if(wynik==0)
             {
-                //rekomendowane_zespoly_wynik(&zespoly,&wynik_zespoly,&licznik,wsk_sasiad);
-
                 zespoly[licznik]=wsk_sasiad->nazwa;
                 wynik_zespoly[licznik]=wynik_zespoly[licznik]+1;
                 zespoly=realloc(zespoly,(licznik+2)*sizeof(char*));
@@ -188,25 +186,6 @@ for(int i=0;i<licznik+1;i++)
 
 return;
 }
-/*
-void rekomendowane_zespoly_wynik(char ***zespoly[], int *wynik_zespoly[], int *licznik, struct zespoly*wsk_sasiad)
-{
-
-                *zespoly[(*licznik)]=wsk_sasiad->nazwa;
-                *wynik_zespoly[(*licznik)]=*wynik_zespoly[(*licznik)]+1;
-                *zespoly=realloc(*zespoly,((*licznik)+2)*sizeof(char*));
-                *zespoly[(*licznik)+1]=(char*)malloc(40*sizeof(char));
-                *wynik_zespoly=realloc(*wynik_zespoly,((*licznik)+2)*sizeof(int*));
-                *wynik_zespoly[(*licznik)+1]=0;
-                (*licznik)=(*licznik)+1;
-
-    return;
-
-}
-*/
-
-
-
 
 void najlepsze_zespoly(char** zespoly[],int wynik_zespoly[],int licznik)
 {
